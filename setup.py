@@ -92,6 +92,7 @@ setup(
                       'libvirt-python',
                       'python-dateutil',
                       'apache-libcloud',
+                      'manhole',
                       ],
 
 
