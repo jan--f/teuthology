@@ -358,8 +358,8 @@ class ProvisionOpenStack(OpenStack):
                                 "--name " + name + " " +
                                 instance['ID'])
                 fqdn = name + '.' + config.lab_domain
-                if not misc.ssh_keyscan_wait(fqdn):
-                    raise ValueError('ssh_keyscan_wait failed for ' + fqdn)
+                if not misc.ssh_keyscan_wait(ip):
+                    raise ValueError('ssh_keyscan_wait failed for ' + ip)
                 time.sleep(15)
                 if not self.cloud_init_wait(instance):
                     raise ValueError('cloud_init_wait failed for ' + fqdn)
